@@ -87,8 +87,8 @@ function Cart() {
   );
 
   return (
-    <div className="max-w-container mx-auto px-4">
-      <h2 className="text-2xl font-semibold mt-8">Shopping Cart</h2>
+    <div className="max-w-6xl mx-auto px-4 py-4">
+      <h2 className="text-2xl font-semibold mt-8 mb-8">Shopping Cart</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (

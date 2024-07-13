@@ -57,14 +57,14 @@ const Selesai = () => {
     };
 
     return (
-        <div className="container mx-auto">
-            <h2 className=" text-center text-4xl font-semibold mt-5 mb-5 gap-4">History</h2>
-            <h3 className="text-center text-2xl font-semibold mb-10">Order History List</h3>
+        <div className="max-w-6xl mx-auto px-4 py-4">
+            <h2 className="text-center text-4xl font-semibold mt-5 mb-5">History</h2>
+            <h3 className="text-center text-2xl font-semibold mb-8">Order History List</h3>
 
             {/* Complete Transactions */}
             {completeTransactions && Array.isArray(completeTransactions) && completeTransactions.length > 0 ? (
                 <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-2">Completed Transactions</h3>
+                    <h3 className="text-xl font-semibold mb-2 mt-2">Completed Transactions</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {completeTransactions.map((item, index) => (
                             <div key={index} className="pesanan-card bg-white shadow-md rounded-lg p-4">
@@ -91,8 +91,8 @@ const Selesai = () => {
 
             {/* Modal */}
             {isModalOpen && selectedTransaction && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center overflow-x-auto overflow-y-auto outline-none focus:outline-none">
-                    <div className="relative w-auto max-w-3xl mx-auto my-6">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="relative w-full max-w-3xl mx-auto my-6">
                         {/* Modal content */}
                         <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                             {/* Header */}
@@ -110,7 +110,7 @@ const Selesai = () => {
                                 </button>
                             </div>
                             {/* Body */}
-                            <div className="relative p-6 flex-auto">
+                            <div className="relative p-6 flex-auto overflow-auto max-h-96">
                                 <table className="min-w-full divide-y divide-gray-200">
                                     <tbody className="bg-white divide-y divide-gray-200">
                                         <tr>

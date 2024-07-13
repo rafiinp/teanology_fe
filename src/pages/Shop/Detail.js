@@ -84,12 +84,12 @@ function Detail() {
   }
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden mt-8 flex max-w-7xl mx-auto border border-gray-300">
-        <div className="w-1/3">
+    <div className="container mx-auto px-4 py-8">
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden mt-8 flex flex-col md:flex-row max-w-7xl mx-auto border border-gray-300">
+        <div className="w-full md:w-1/3">
           <img src={`https://teanologyweb.tifpsdku.com/admin/upload_product/${product.photo_product}`} alt={product.name_product} className="w-full h-auto object-contain" />
         </div>
-        <div className="w-2/3 p-6">
+        <div className="w-full md:w-2/3 p-6">
           <h2 className="text-3xl font-semibold text-gray-800 mb-2">{product.name_product}</h2>
           <p className="text-xl text-green-600 font-bold mb-2">{formatPrice(product.price_product)}</p>
           <p className="text-gray-700 mb-4">{product.description_product}</p>
@@ -108,7 +108,7 @@ function Detail() {
           <div className="flex items-center mb-4">
             <span className="text-gray-500 mr-2">Status:</span>
             <span className={`text-gray-900 ${product.status_product ? 'text-green-500' : 'text-red-500'}`}>
-              {product.status_product ? 'Available' : 'not available'}
+              {product.status_product ? 'Available' : 'Not available'}
             </span>
           </div>
 
@@ -122,7 +122,7 @@ function Detail() {
             </button>
           </div>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between space-x-4">
             <Link to="/shop" className="border border-green-600 bg-white text-green-600 hover:text-green-700 hover:border-green-700 font-bold py-2 px-4 rounded">Back</Link>
             <button onClick={addToCart} className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Add To Cart</button>
           </div>

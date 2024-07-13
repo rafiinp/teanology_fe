@@ -119,8 +119,8 @@ const Checkout = () => {
   };
 
   return (
-    <div className="max-w-container mx-auto px-4">
-      <h2 className="text-2xl font-semibold mt-8">Checkout</h2>
+    <div className="max-w-6xl mx-auto px-4 py-4">
+      <h2 className="text-2xl font-semibold mt-8 mb-8">Checkout</h2>
       <div>
         {cartItems.map((item) => (
           <CartItem key={item.id_product} item={{ ...item, harga: formatPrice(item.harga) }} />
@@ -132,7 +132,7 @@ const Checkout = () => {
           </p>
         )}
         <div className="flex flex-col md:flex-row mt-4">
-          <div className="md:w-1/2 pr-2">
+          <div className="md:w-1/2 pr-2 mb-4 md:mb-0">
             <label htmlFor="address" className="block text-gray-700 font-bold mb-2">
               Address
             </label>
@@ -167,7 +167,7 @@ const Checkout = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row mt-4">
-          <div className="md:w-1/2 pr-2">
+          <div className="md:w-1/2 pr-2 mb-4 md:mb-0">
             <label htmlFor="courier" className="block text-gray-700 font-bold mb-2">
               Courier
             </label>
@@ -199,13 +199,11 @@ const Checkout = () => {
           </div>
         </div>
         <div className="flex justify-end mt-4">
-  <h3 className="text-lg font-semibold">
-    Total: {formatPrice(total + shippingCost)}
-    {shippingCost > 0 && <span className="ml-2 text-sm">(Shipping: {formatPrice(shippingCost)})</span>}
-  </h3>
-</div>
-
-
+          <h3 className="text-lg font-semibold">
+            Total: {formatPrice(total + shippingCost)}
+            {shippingCost > 0 && <span className="ml-2 text-sm">(Shipping: {formatPrice(shippingCost)})</span>}
+          </h3>
+        </div>
         <div className="flex justify-end mt-4 space-x-4">
           <button
             className="border border-green-600 bg-white text-green-600 hover:text-green-700 hover:border-green-700 font-bold py-2 px-4 rounded"
@@ -220,7 +218,6 @@ const Checkout = () => {
             Confirm Order
           </button>
         </div>
-        
       </div>
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">

@@ -50,7 +50,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/id/"
+                href="https://www.instagram.com/teanology.id/"
                 target="_blank"
                 rel="noreferrer"
               >

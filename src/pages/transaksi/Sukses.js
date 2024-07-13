@@ -9,7 +9,7 @@ const CheckoutSuccess = () => {
   };
 
   return (
-    <div className="container mx-auto text-center">
+    <div className="max-w-6xl mx-auto px-4 py-4 text-center">
       <h2 className="text-black text-4xl font-bold text-center mb-6 mt-6">Checkout Success</h2>
       <p>Your order has been successfully confirmed. Thank you for shopping with us!</p>
       <button

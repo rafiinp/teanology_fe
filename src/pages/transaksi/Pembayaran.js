@@ -46,7 +46,7 @@ const Pembayaran = () => {
     };
 
     return (
-        <div className="container mx-auto">
+        <div className="max-w-6xl mx-auto px-4 py-4">
             <h2 className="text-center text-4xl font-semibold mb-5 mt-5 gap-4">Payment</h2>
             <h3 className="text-2xl font-semibold text-center mb-5">Unpaid Order List</h3>
             {data && Array.isArray(data) && data.length > 0 ? (
